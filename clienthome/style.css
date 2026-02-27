@@ -1,0 +1,22 @@
+h1 {
+    color: white;
+}
+
+.img-text-container {
+    position: relative;
+    display: inline-block; 
+} 
+
+.img-text-container img { 
+    display: block;
+} 
+
+.img-text-container .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
