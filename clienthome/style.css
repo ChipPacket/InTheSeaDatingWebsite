@@ -1,6 +1,9 @@
 h1 {
     color: white;
 }
+body{
+    color: #FDCEC9;
+}
 
 .img-text-container {
     position: relative;
