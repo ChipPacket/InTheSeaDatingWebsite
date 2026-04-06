@@ -1,4 +1,4 @@
-/* General page styling */
+
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: #fdcec9;
@@ -6,7 +6,6 @@ body {
     padding: 20px;
 }
 
-/* Admin button */
 a button {
     background-color: #7CD5E0;
     color: white;
@@ -23,7 +22,6 @@ a button:hover {
     background-color: #58a6b0;
 }
 
-/* Page title */
 h2 {
     text-align: center;
     margin-bottom: 25px;
@@ -31,7 +29,6 @@ h2 {
     color: #333;
 }
 
-/* Table container */
 div {
     max-width: 1000px;
     margin: 0 auto;
@@ -41,7 +38,6 @@ div {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -62,17 +58,15 @@ table td {
     border-bottom: 1px solid #ddd;
 }
 
-/* Zebra striping */
 table tr:nth-child(even) {
     background-color: #f2f6fc;
 }
 
-/* Hover effect */
 table tr:hover {
     background-color: #e8f0fe;
 }
 
-/* Link column styling */
+
 table td:last-child {
     color: #0d6efd;
     font-weight: 600;
