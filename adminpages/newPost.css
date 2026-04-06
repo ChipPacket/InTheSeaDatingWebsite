@@ -1,53 +1,83 @@
+/* General page styling */
 body {
-  margin: 50px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #fdcec9;
+    margin: 0;
+    padding: 20px;
 }
 
-.file-uploader {
-  /* make it invisible */
-  /* make it take the full height and width of the parent container */
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
+/* Admin button */
+a button {
+    background-color: #7cd5e0;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.2s ease;
 }
 
-.upload-icon {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* initial icon state */
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  color: #ccc;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #bbb;
+a button:hover {
+    background-color: #58a6b0;
 }
 
-
-.profile-picture {
-  opacity: 0.75;
-  height: 250px;
-  width: 250px;
-  position: relative;
-  overflow: hidden;
-
-  /* default image */
-  background: url('https://qph.cf2.quoracdn.net/main-qimg-f32f85d21d59a5540948c3bfbce52e68');
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-
-  -webkit-box-shadow: 0 8px 6px -6px black;
-  -moz-box-shadow: 0 8px 6px -6px black;
-  box-shadow: 0 8px 6px -6px black;
+/* Main container */
+#NP {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* toggle icon state */
-.profile-picture:hover .upload-icon {
-  opacity: 1;
+/* Title */
+#NP h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Form labels */
+#newPost label {
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
+    color: #444;
+}
+
+/* Textareas */
+#newPost textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 15px;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+#newPost textarea:focus {
+    border-color: #0d6efd;
+    outline: none;
+}
+
+/* Submit button */
+#newPost input[type="submit"] {
+    background-color: #7CD5E0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+#newPost input[type="submit"]:hover {
+    background-color: #58a6b0;
 }
