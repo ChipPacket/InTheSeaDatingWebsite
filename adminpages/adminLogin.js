@@ -23,7 +23,7 @@ document.getElementById("login").addEventListener("submit", async function(e) {
             alert("Logged In success");
 
             //saves logged in user - not secure but not sure how else to do this tbh
-            localStorage.setItem("userId", result.user.id);
+            localStorage.setItem("adminId", result.admin.id);
 
             document.getElementById("login").reset();
             window.location.href = "adminhome.html"
