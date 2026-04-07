@@ -1,0 +1,65 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fdcec9;
+    padding: 20px;
+}
+
+a button {
+    background-color: #7cd5e0;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+a button:hover {
+    background-color: #58a6b0;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+table th, table td {
+    border: 1px dotted #58a6b0;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+table tr {
+    background-color: #e8f6f6;
+}
+
+table th {
+    background-color: #7cd5e0;
+    color: white;
+    font-weight: 600;
+}
+
+form {
+    margin-top: 15px;
+}
+
+form label {
+    margin-left: 6px;
+    margin-right: 20px;
+}
+
+form input[type="submit"] {
+    margin-top: 15px;
+    background-color: #58a6b0;
+    color: white;
+    border: none;   
+    padding: 8;
+}

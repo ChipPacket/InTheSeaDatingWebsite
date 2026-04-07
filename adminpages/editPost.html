@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog Post</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+	<!-- admin link back to homepage nav bar type sitch -->
+	<a href="editBlogPost.html"><button>ADMIN HOME</button></a>
+	<!-- only display options to change what they clicked in check box -->
+	<! -- they can edit the title, author, content, and photo url -->
+	<! -- show current data -->
+	<div id="currentPost">
+		<h2>Current Post</h2>
+		<h4>Title:</h4>
+		<p>Placeholder Title</p>
+		<h4>Author(s):</h4>
+		<p>Placeholder Author(s)</p>
+		<h4>Content:</h4>
+		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.</p>
+		<h4>Photo URL:</h4>
+		<img src="https://moowy.co.uk/wp-content/uploads/2023/10/gras-closeup-scaled.jpg" alt="Post Photo" style="max-width: 50%; height: auto;">
+		<p>https://moowy.co.uk/wp-content/uploads/2023/10/gras-closeup-scaled.jpg</p>
+	</div>
+
+	<div id="editPost">
+		<h2>Edit Post</h2>
+		<!-- autopopulate fields with current post data -->
+		<form action="" id="editPost">
+			<label for="title">Title:</label><br>
+			<textarea type="text" id="title" name="title" rows="1" cols="100"></textarea><br>
+			
+			<label for="author">Author(s):</label><br>
+			<textarea type="text" id="author" name="author" rows="1" cols="100"></textarea><br>
+
+			<label for="photo">Photo:</label><br>
+			<textarea id = "photo" name="photo" rows="1" cols="100"></textarea><br>
+
+			<label for="content">Content:</label><br>
+			<textarea id = "content" name="content" rows="10" cols="100"></textarea><br>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+
+
+	
+	<script src="newPost.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
