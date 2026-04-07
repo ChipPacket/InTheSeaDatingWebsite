@@ -74,3 +74,8 @@ body > a:nth-of-type(n+2) {
     }
 }
 
+.centre {
+   display:flex;
+   justify-content: center;
+   align-items: center; 
+}
