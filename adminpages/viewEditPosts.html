@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Post</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="admin.css">
 	<style>
 		table, th, td {
   			border: 1px solid black;
   			border-collapse: collapse;
+			color: #333;
 		}
 		th, td {
   			padding: 15px;
@@ -33,7 +35,6 @@
 		<!-- they will need to pick which post to edit -->
 		<table>
 			<tr>
-				<th>Select</th>
 				<th>Title</th>
 				<th>Author(s)</th>
 				<th>Last edited</th>
@@ -41,16 +42,14 @@
 				<th>Link</th>
 			</tr>	
 			<tr>
-				<td><input type="radio" id="selectPost" name="selectPost" value="selectPost"></td>
-				<td>Our stories</td> <!-- add link -->
+				<td><input type="submit" id="selectPost" name="selectPost" value="Our stories"></td>
 				<td>Jackie Jones</td>
 				<td> 09/01/2026 09:00</td>
 				<td>adminid or name</td>
 				<td> link !! opens in new tab</td>
 			</tr>
 			<tr>
-				<td><input type="radio" id="selectPost" name="selectPost" value="selectPost"></td>
-				<td>New office</td> <!-- add link -->
+				<td><input type="submit" id="selectPost" name="selectPost" value="New office"></td>
 				<td>Jackie Jones</td>
 				<td> 09/02/2026 10:00</td>
 				<td>adminid</td>
@@ -58,25 +57,6 @@
 			</tr>
 		</table>
 		
-		<!-- if they click on a title they can edit that post -->
-		<br>
-		<p>Should this show after they choose a post</p>
-		<p>Select what you want to change</p>
-		<form>
-			<input type="checkbox" id="title" value="title">
-			<label for="title">Title</label><br>
-			
-			<input type="checkbox" id="author" value="Author">
-			<label for="author">Author</label><br>
-			
-			<input type="checkbox" id="content" value="Content">
-			<label for="content">Content</label><br>
-			
-			<input type="checkbox" id="photo" value="Photo">
-			<label for="photo">Photo</label><br>
-			
-			<input type="submit" value="Submit">
-		</form>
 	</div>	
 	
 	<script src="mg.js></script>
