@@ -4,14 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA4PB8hE8pKj5T9P0pLtrHgI5xNJYz8cCf5F5R8uF3wG5AKF2w6kVmgE7OgQ96" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="adminstyle.css">
 </head>
-<body>
-    <h1>This is the admin home page</h1>
-    <!--
-        We will need more pages - this is a placeholder / starting point.
-    -->
+<body id="adminBody">
+    <!-- NAVBAR -->
+     <p>this is a change to make sure branch publish right</p>
+    <nav class="navbar navbar-expand-lg" id="nav">
+        <div class="container-fluid">
+            <img src="assets/logo.png" alt="Logo" class="logo"> 
+            <a class="navbar-brand" href="#"><b>InTheSea</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Review User Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">View User Profiles</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Blog Management
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Add New Blog Posts</a></li>
+                            <li><a class="dropdown-item" href="#">Edit Blog Posts</a></li>
+                            <li><a class="dropdown-item" href="#">Delete Blog Posts</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">View Blog Posts</a></li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">View Admin Log</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    ADMIN NAME
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BODY -->
+    <h2> Hello ADMIN NAME</h2>
+
+    <!-- USER MODERATION -->
+    <h4>User Moderation Options</h4>
+
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Review User Reports</h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn" type="button">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Special title treatment</h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn" type="button">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">View Admin Log</h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn" type="button">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <br>
+   
+
+    <!-- BLOG MANAGEMENT -->
+    <h4> Blog Management</h4>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Add Blog Posts</h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn" type="button">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Edit Blog Posts</h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn" type="button">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Delete Blog Posts</h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn" type="button">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">View Blog Posts</h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn" type="button">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <!-- IMAGE -->
+    <img src="assets/aquarium.jpg" class="img-fluid" alt="Aquarium image"> 
 </body>
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

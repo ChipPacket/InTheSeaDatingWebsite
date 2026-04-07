@@ -1,0 +1,23 @@
+#adminBody {
+    background-color: white;
+}
+
+#logo {
+    width:50px;
+    height:50px;
+    margin-right:5px;
+}
+
+.btn {
+    background-color: white;
+    color:black
+}
+
+.card {
+    background-color: #FFA07A;
+
+}
+
+#nav {
+    background-color: #FFA07A;
+}
