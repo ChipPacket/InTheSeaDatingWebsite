@@ -107,7 +107,7 @@ blog_posts = [
         "dateOfPublish": date(2024, 2, 10)
     },
     {
-        "adminID": 2,
+        "adminID": 3,
         "authors": "Maddie Gee",
         "title": "New Features Released",
         "content": "We've added exciting new features!",
