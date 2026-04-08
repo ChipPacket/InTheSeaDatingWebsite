@@ -5,16 +5,17 @@ from datetime import date
 # List of users to add
 users = [
     {
-        "firstName": "John",
-        "lastName": "Doe",
-        "birthday": date(1995, 5, 14),
+        "firstName": "jesus",
+        "lastName": "christ",
+        "birthday": date(1000, 12, 25),
         "email": "john.doe@example.com",
         "mobileNo": "07123456789",
         "ownGender": "Male",
         "attractedGender": "Female",
         "profileContent": "Love travelling and music",
         "password": "hashedpassword123",
-        "activeUser": True
+        "activeUser": True,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlTYMeNp_7MrmR5_XpVHKv_UQQz6pIvAS1jA&s"
     },
     {
         "firstName": "Jane",
@@ -26,19 +27,21 @@ users = [
         "attractedGender": "Male",
         "profileContent": "Gym lover and foodie",
         "password": "hashedpassword456",
-        "activeUser": True
+        "activeUser": True,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GoefY7o1IOlgbc6huGYNhjQwJL79SezcqQ&s"
     },
     {
-        "firstName": "Alex",
-        "lastName": "Taylor",
-        "birthday": date(2000, 1, 10),
+        "firstName": "King",
+        "lastName": "Charles",
+        "birthday": date(1948, 11, 14),
         "email": "alex.taylor@example.com",
         "mobileNo": "07345678901",
         "ownGender": "Non-binary",
         "attractedGender": "All",
         "profileContent": "Tech enthusiast",
         "password": "hashedpassword789",
-        "activeUser": True
+        "activeUser": True,
+        "image": "https://people.com/thmb/kXryMIxxzett33juT5iNoe8LGBk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(689x346:691x348):format(webp)/king-charles-london-fashion-week-021926-1-07cd8aa8c07949fcb6b3215733982cf7.jpg"
     }
 ]
 
@@ -127,7 +130,8 @@ with app.app_context():
             attractedGender=user_data["attractedGender"],
             profileContent=user_data["profileContent"],
             password=user_data["password"],
-            activeUser=user_data["activeUser"]
+            activeUser=user_data["activeUser"],
+            image=user_data["image"]
         )
 
         # Add to database

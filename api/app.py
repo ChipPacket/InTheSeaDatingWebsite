@@ -43,7 +43,8 @@ class UserAPI(Resource):
                 "attractedGender": user.attractedGender,
                 "profileContent": user.profileContent,
                 "password": user.password,
-                "activeUser": user.activeUser
+                "activeUser": user.activeUser,
+                "image": user.image
             }
             user_list.append(user_data)
 
@@ -57,7 +58,7 @@ class UserAPI(Resource):
 
         required_fields = [
             "firstName", "lastName", "birthday", "email", "mobileNo",
-            "ownGender", "attractedGender", "profileContent", "password"
+            "ownGender", "attractedGender", "profileContent", "password", "image"
         ]
         if not data or any(field not in data for field in required_fields):
             return {"error": "Missing required fields"}
@@ -72,7 +73,8 @@ class UserAPI(Resource):
             attractedGender=data["attractedGender"],
             profileContent=data["profileContent"],
             password=data["password"],
-            activeUser=True
+            activeUser=True,
+            image=data["image"]
         )
 
         db.session.add(new_user)
@@ -101,6 +103,7 @@ class UserAPI(Resource):
         user.profileContent=data["profileContent"]
         user.password=data["password"]
         user.activeUser=data["activeUser"]
+        user.image=data["image"]
 
         # Commit the changes
         db.session.commit()
@@ -245,7 +248,7 @@ class BlogPostAPI(Resource):
 
         new_blogPost = BlogPost(
             adminID=data["adminID"],
-            author=data["authors"],
+            authors=data["authors"],
             title=data["title"],
             content=data["content"],
             image=data["image"],
@@ -388,6 +391,42 @@ class ReportAPI(Resource):
         return {"message": "User deleted successfully!"}
 
 api.add_resource(ReportAPI, "/api/reports")
+
+# Slight bit of security
+class LoginAPI(Resource):
+    def post(self):
+
+        #get user inputs
+        data = request.get_json()
+
+        #get the email and password
+        email = data.get("email")
+        password = data.get("password")
+
+        #check all data is there
+        if not email or not password:
+            return {"error": "Email and password required"}
+
+        #find user id of matching email
+        user = User.query.filter_by(email=email).first()
+
+        if not user:
+            return {"error": "User not found :("}
+
+        #check if password mismatch
+        if user.password != password:
+            return {"error": "Invalid password :("}
+
+        #return user id and email if sucess
+        return {
+            "message": "Login successful yay",
+            "user": {
+                "id": user.userID,
+                "email": user.email
+            }
+        }
+
+api.add_resource(LoginAPI, "/api/login")
 
 if __name__ == "__main__":
     app.run(debug=True)
