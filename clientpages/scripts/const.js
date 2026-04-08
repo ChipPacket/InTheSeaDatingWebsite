@@ -1,2 +1,2 @@
-const KEY = "5318d112c6a549aa40724b17655e067ef95ae1e7a5c91f24df0d44c354536831";
+const KEY = "1be0e552b35f05fc7aeb7fce4133dc025ee6b1a89e87aa15ce7040859270aae3";
 const URL = "http://127.0.0.1:5000";

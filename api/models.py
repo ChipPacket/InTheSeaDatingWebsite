@@ -16,12 +16,6 @@ class User(db.Model):
     password = db.Column(db.String(255), nullable=False)
     image = db.Column(db.String(150), nullable=True)
     activeUser = db.Column(db.Boolean, default=True)
-    q1 = db.Column(db.String(200), nullable=True, default="")
-    q2 = db.Column(db.String(200), nullable=True, default="")
-    q3 = db.Column(db.String(200), nullable=True, default="")
-    a1 = db.Column(db.String(200), nullable=True, default="")
-    a2 = db.Column(db.String(200), nullable=True, default="")
-    a3 = db.Column(db.String(200), nullable=True, default="")
 
 class Admin(db.Model):
     adminID = db.Column(db.Integer, primary_key=True)  # Unique ID for each Admin

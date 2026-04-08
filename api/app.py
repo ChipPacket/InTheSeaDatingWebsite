@@ -25,7 +25,7 @@ api = Api(app)
 
 class UserAPI(Resource):
     # GET method retrieves all Users from the database
-     # Apply middleware to GET requests
+    @require_api_key  # Apply middleware to GET requests
     def get(self):
         users = User.query.all()
         user_list = []
@@ -44,14 +44,7 @@ class UserAPI(Resource):
                 "profileContent": user.profileContent,
                 "password": user.password,
                 "activeUser": user.activeUser,
-                "image": user.image,
-                "q1": user.q1,
-                "q2": user.q2,
-                "q3": user.q3,
-                "a1": user.a1,
-                "a2": user.a2,
-                "a3": user.a3
-
+                "image": user.image
             }
             user_list.append(user_data)
 
@@ -111,12 +104,6 @@ class UserAPI(Resource):
         user.password=data["password"]
         user.activeUser=data["activeUser"]
         user.image=data["image"]
-        user.q1=data["q1"]
-        user.q2=data["q2"]
-        user.q3=data["q3"]
-        user.a1=data["a1"]
-        user.a2=data["a2"]
-        user.a3=data["a3"]
 
         # Commit the changes
         db.session.commit()
@@ -285,12 +272,11 @@ class BlogPostAPI(Resource):
 
         # Update BlogPost details
         blogPost.adminID=data["adminID"]
-        blogPost.authors = data["author"]
+        blogPost.author=data["author"]
         blogPost.title=data["title"]
         blogPost.content=data["content"]
         blogPost.image=data["image"]
-        if "dateOfPublish" in data:
-            blogPost.dateOfPublish = datetime.strptime(data["dateOfPublish"], "%Y-%m-%d").date()
+        blogPost.dateOfPublish=datetime.strptime(data["dateOfPublish"], "%Y-%m-%d").date()
 
         # Commit the changes
         db.session.commit()
@@ -410,8 +396,10 @@ api.add_resource(ReportAPI, "/api/reports")
 class LoginAPI(Resource):
     def post(self):
 
-        
+        #get user inputs
         data = request.get_json()
+
+        #get the email and password
         email = data.get("email")
         password = data.get("password")
 
@@ -423,17 +411,18 @@ class LoginAPI(Resource):
         user = User.query.filter_by(email=email).first()
 
         if not user:
-            return {"User not found"}
+            return {"error": "User not found :("}
 
         #check if password mismatch
         if user.password != password:
-            return {"Incorrect Password or Username"}
+            return {"error": "Invalid password :("}
 
-        #return user id to login
+        #return user id and email if sucess
         return {
             "message": "Login successful yay",
             "user": {
-                "id": user.userID
+                "id": user.userID,
+                "email": user.email
             }
         }
 

@@ -41,7 +41,8 @@ async function loadUsers() {
                             let image = user.image
                             if (image == "")
                                 {
-                                    image = "pfp.jpg"
+                                    image = "../assets/pfp.jpg"
+                                    console.log("check");
                                 }
 
 
@@ -53,7 +54,7 @@ async function loadUsers() {
                             // button will redirect to user page as well as storing the users id again
                             card.innerHTML = `
                                 <div class="card my-3 h-100" style="width: 18rem;">
-                                    <img class="card-img-top" src="${user.image}" alt="Card image cap" style="height:250px; width:100%; object-fit:cover;">
+                                    <img class="card-img-top" src="${image}" alt="Card image cap" style="height:250px; width:100%; object-fit:cover;">
                                     <div class="card-body">
                                     <h5 class="card-title text-start">${user.firstName} ${user.lastName}</h5>
                                     <p class="card-text text-start">Age: ${getAge(user.birthday)}</p>
