@@ -389,5 +389,38 @@ class ReportAPI(Resource):
 
 api.add_resource(ReportAPI, "/api/reports")
 
+# Slight bit of security
+class LoginAPI(Resource):
+    def post(self):
+
+        
+        data = request.get_json()
+        email = data.get("email")
+        password = data.get("password")
+
+        #check all data is there
+        if not email or not password:
+            return {"error": "Email and password required"}
+
+        #find user id of matching email
+        user = User.query.filter_by(email=email).first()
+
+        if not user:
+            return {"User not found"}
+
+        #check if password mismatch
+        if user.password != password:
+            return {"Incorrect Password or Username"}
+
+        #return user id to login
+        return {
+            "message": "Login successful yay",
+            "user": {
+                "id": user.userID
+            }
+        }
+
+api.add_resource(LoginAPI, "/api/login")
+
 if __name__ == "__main__":
     app.run(debug=True)
