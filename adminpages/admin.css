@@ -14,7 +14,7 @@ a {
 
 
 header {
-    text-align: center;
+    text-align: left;
     margin: 40px 0 30px;
 }
 
@@ -58,7 +58,7 @@ a:first-of-type button {
 
 body > a {
     display: inline-block;
-    text-align: center;
+    text-align: left;
 }
 
 body > a:nth-of-type(n+2) {
@@ -104,7 +104,7 @@ a button:hover {
 
 /* Title */
 h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 25px;
     font-weight: 600;
     color: #333;
@@ -153,7 +153,7 @@ input[type="submit"] {
 
 
 /* Table styles */
-div {
+.divtable {
     max-width: 1000px;
     margin: 0 auto;
     background: white;
@@ -206,4 +206,19 @@ h4 {
     margin-bottom: 5px;
     font-weight: 600;
     color: #333;
+}
+
+#logo {
+    width:50px;
+    height:50px;
+    margin-right:5px;
+}
+
+.card {
+    background-color: #ffffff;
+
+}
+
+#nav {
+    background-color: salmon;
 }
