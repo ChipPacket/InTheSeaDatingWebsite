@@ -25,7 +25,7 @@ api = Api(app)
 
 class UserAPI(Resource):
     # GET method retrieves all Users from the database
-    @require_api_key  # Apply middleware to GET requests
+     # Apply middleware to GET requests
     def get(self):
         users = User.query.all()
         user_list = []
@@ -43,7 +43,15 @@ class UserAPI(Resource):
                 "attractedGender": user.attractedGender,
                 "profileContent": user.profileContent,
                 "password": user.password,
-                "activeUser": user.activeUser
+                "activeUser": user.activeUser,
+                "image": user.image,
+                "q1": user.q1,
+                "q2": user.q2,
+                "q3": user.q3,
+                "a1": user.a1,
+                "a2": user.a2,
+                "a3": user.a3
+
             }
             user_list.append(user_data)
 
@@ -57,7 +65,7 @@ class UserAPI(Resource):
 
         required_fields = [
             "firstName", "lastName", "birthday", "email", "mobileNo",
-            "ownGender", "attractedGender", "profileContent", "password"
+            "ownGender", "attractedGender", "profileContent", "password", "image"
         ]
         if not data or any(field not in data for field in required_fields):
             return {"error": "Missing required fields"}
@@ -72,7 +80,8 @@ class UserAPI(Resource):
             attractedGender=data["attractedGender"],
             profileContent=data["profileContent"],
             password=data["password"],
-            activeUser=True
+            activeUser=True,
+            image=data["image"]
         )
 
         db.session.add(new_user)
@@ -101,6 +110,13 @@ class UserAPI(Resource):
         user.profileContent=data["profileContent"]
         user.password=data["password"]
         user.activeUser=data["activeUser"]
+        user.image=data["image"]
+        user.q1=data["q1"]
+        user.q2=data["q2"]
+        user.q3=data["q3"]
+        user.a1=data["a1"]
+        user.a2=data["a2"]
+        user.a3=data["a3"]
 
         # Commit the changes
         db.session.commit()
@@ -245,7 +261,7 @@ class BlogPostAPI(Resource):
 
         new_blogPost = BlogPost(
             adminID=data["adminID"],
-            author=data["authors"],
+            authors=data["authors"],
             title=data["title"],
             content=data["content"],
             image=data["image"],
@@ -269,11 +285,12 @@ class BlogPostAPI(Resource):
 
         # Update BlogPost details
         blogPost.adminID=data["adminID"]
-        blogPost.author=data["author"]
+        blogPost.authors = data["author"]
         blogPost.title=data["title"]
         blogPost.content=data["content"]
         blogPost.image=data["image"]
-        blogPost.dateOfPublish=datetime.strptime(data["dateOfPublish"], "%Y-%m-%d").date()
+        if "dateOfPublish" in data:
+            blogPost.dateOfPublish = datetime.strptime(data["dateOfPublish"], "%Y-%m-%d").date()
 
         # Commit the changes
         db.session.commit()

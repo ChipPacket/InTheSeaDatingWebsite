@@ -12,9 +12,16 @@ class User(db.Model):
     mobileNo = db.Column(db.String(20), nullable=False)  
     ownGender = db.Column(db.String(50), nullable=False)  
     attractedGender = db.Column(db.String(50), nullable=False)
-    profileContent = db.Column(db.String(50), nullable=False)
+    profileContent = db.Column(db.String(50), nullable=True, default="")
     password = db.Column(db.String(255), nullable=False)
+    image = db.Column(db.String(150), nullable=True)
     activeUser = db.Column(db.Boolean, default=True)
+    q1 = db.Column(db.String(200), nullable=True, default="")
+    q2 = db.Column(db.String(200), nullable=True, default="")
+    q3 = db.Column(db.String(200), nullable=True, default="")
+    a1 = db.Column(db.String(200), nullable=True, default="")
+    a2 = db.Column(db.String(200), nullable=True, default="")
+    a3 = db.Column(db.String(200), nullable=True, default="")
 
 class Admin(db.Model):
     adminID = db.Column(db.Integer, primary_key=True)  # Unique ID for each Admin
@@ -38,8 +45,8 @@ class BlogPost(db.Model):
     adminID = db.Column(db.Integer, nullable=False)  #AdminsID responsable
     authors = db.Column(db.String(50), nullable=False)  
     title = db.Column(db.String(200), nullable=True)  
-    content = db.Column(db.String(150), nullable=True)
-    image = db.Column(db.String(50), nullable=True)
+    content = db.Column(db.String(500), nullable=True)
+    image = db.Column(db.String(150), nullable=True)
     dateOfPublish = db.Column(db.Date, nullable=False) 
 
 class APIKey(db.Model):

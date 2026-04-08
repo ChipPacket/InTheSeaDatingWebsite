@@ -1,7 +1,7 @@
 import sqlite3
 
 # Database file
-DB_FILE = "api/instance/ITS.db"
+DB_FILE = "instance/ITS.db"
 
 # Connect to SQLite database
 conn = sqlite3.connect(DB_FILE)
