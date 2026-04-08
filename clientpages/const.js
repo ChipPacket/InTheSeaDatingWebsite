@@ -1,0 +1,2 @@
+const KEY = "7b26804109382641a54ff1ded939045d8978542fe8b0f14cbd51b44fc302f4c9";
+const URL = "http://127.0.0.1:5000";
