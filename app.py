@@ -174,7 +174,7 @@ class AdminAPI(Resource):
         data = request.get_json()
 
         required_fields = [
-            "firstName", "lastName", "birthday", "email", "permissionLevel"
+            "firstName", "lastName", "birthday", "email", "permissionLevel", "password"
         ]
         if not data or any(field not in data for field in required_fields):
             return {"error": "Missing required fields"}
@@ -184,7 +184,8 @@ class AdminAPI(Resource):
             lastName=data["lastName"],
             birthday=datetime.strptime(data["birthday"], "%Y-%m-%d").date(),
             email=data["email"],
-            permissionLevel=data["permissionLevel"]
+            permissionLevel=data["permissionLevel"],
+            password=data["password"]
         )
 
         db.session.add(new_admin)
@@ -208,6 +209,7 @@ class AdminAPI(Resource):
         admin.birthday=datetime.strptime(data["birthday"], "%Y-%m-%d").date()
         admin.email=data["email"]
         admin.permissionLevel=data["permissionLevel"]
+        admin.password=data["password"]
 
         # Commit the changes
         db.session.commit()

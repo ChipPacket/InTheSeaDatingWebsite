@@ -69,14 +69,16 @@ admins = [
         "lastName": "Mitchell",
         "birthday": date(2006, 3, 22),
         "email": "Hamishgmitchell@gmail.com",
-        "permissionLevel": "Max"
+        "permissionLevel": "Max",
+        "password": "test"
     },
     {
         "firstName": "Micheal",
         "lastName": "Bell",
         "birthday": date(2007, 5, 17),
         "email": "michaelbell@hotmail.com",
-        "permissionLevel": "Max"
+        "permissionLevel": "Max",
+        "password": "test1"
     }
 ]
 
@@ -167,7 +169,8 @@ with app.app_context():
             lastName=admin_data["lastName"],
             birthday=admin_data["birthday"],
             email=admin_data["email"],
-            permissionLevel=admin_data["permissionLevel"]
+            permissionLevel=admin_data["permissionLevel"],
+            password=admin_data["password"]
         )
         db.session.add(new_admin)
 

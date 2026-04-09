@@ -31,6 +31,7 @@ class Admin(db.Model):
     birthday = db.Column(db.Date, nullable=False)  
     email = db.Column(db.String(150), nullable=False)
     permissionLevel = db.Column(db.String(50), nullable=False)
+    password = db.Column(db.String(255), nullable=False)
 
 class Report(db.Model):
     reportID = db.Column(db.Integer, primary_key=True, autoincrement=True)  # Unique ID for each Report
