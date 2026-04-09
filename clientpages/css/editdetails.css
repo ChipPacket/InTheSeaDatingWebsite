@@ -1,0 +1,56 @@
+div.rounded {
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+label {
+    display: block;
+}
+input {
+    display: block;
+}
+#previewTable {
+    width: 100%;
+}
+#editDetails, #submit {
+    float:right;
+    text-align: right;
+    background-color:#7CD5E0;
+    color:white;
+    font-weight: bold;
+}
+
+h1 {
+    color: black;
+}
+
+h4{
+    color:white;
+}
+
+body{
+    background-color: #FDCEC9;
+}
+
+form {
+    background-color: white;
+    margin-left:3%;
+    margin-right:3%;
+    border-width: 5px;
+    border-color: red;
+    border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+label{
+    text-align: left;
+}
+input, select, option, textarea {
+    width:20%;
+}
+h2 {
+    text-align: center;
+}
+.btn:hover {
+    background-color:red;
+}
