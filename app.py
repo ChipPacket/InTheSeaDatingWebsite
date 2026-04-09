@@ -276,7 +276,9 @@ class BlogPostAPI(Resource):
         blogPost.title=data["title"]
         blogPost.content=data["content"]
         blogPost.image=data["image"]
-        blogPost.dateOfPublish=datetime.strptime(data["dateOfPublish"], "%Y-%m-%d").date()
+        if "dateOfPublish" in data and data["dateOfPublish"]:
+            blogPost.dateOfPublish = datetime.strptime(data["dateOfPublish"], "%Y-%m-%d").date()
+        
 
         # Commit the changes
         db.session.commit()

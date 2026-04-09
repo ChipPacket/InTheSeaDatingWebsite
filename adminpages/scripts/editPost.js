@@ -50,7 +50,7 @@ document.getElementById("editPost").addEventListener("submit", async function (e
     const data = {
         id: postid,
         adminID: adminid, 
-        author: document.getElementById("authors").value,
+        author: document.getElementById("author").value,
         title: document.getElementById("title").value,
         content: document.getElementById("content").value,
         image: document.getElementById("photo").value,
@@ -70,7 +70,7 @@ document.getElementById("editPost").addEventListener("submit", async function (e
 
         if (response.ok) {
             alert("Post updated! yay");
-            document.getElementById("login").reset();
+            document.getElementById("editPost").reset();
             loadPosts();    
         }
 
