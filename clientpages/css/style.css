@@ -45,11 +45,6 @@ body{
     text-decoration: underline;
 }
 
-.main {
-    /* t r b l */
-    padding: 20px 0px 200px 50px;
-}
-
-.topnav-right {
-    float: right;
+#navbarDropdown::after {
+    display: none !important;
 }
