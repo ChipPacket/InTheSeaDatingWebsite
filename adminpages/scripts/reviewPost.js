@@ -1,3 +1,35 @@
+async function DltPosts(postid) {
+    
+    const data = {
+        id: postid
+    }
+    
+
+    try {
+            const response = await fetch(`${URL}/api/blogPosts`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-api-key": KEY
+                },
+                body: JSON.stringify(data)
+            });
+
+        
+
+            if (response.ok) 
+                {
+                    window.location.href = "reviewPost.html"
+                };
+            }
+
+    catch(error)
+    {
+        console.error(error);
+        alert("error");
+    }        
+}
+
 async function loadPosts() {
     
     try {
@@ -30,6 +62,7 @@ async function loadPosts() {
                                     <td>${post.author}</td>
                                     <td>${post.dateOfPublish}</td>
                                     <td><button onclick="ViewPosts(${post.id})">Edit</button></td>
+                                    <td><button class="btn btn-danger" onclick="DltPosts(${post.id})">Delete</button></td>
                             `;
 
                             container.appendChild(entry);
@@ -50,6 +83,7 @@ function ViewPosts(postid) {
     localStorage.setItem("PostId", postid);
     window.location.href = "editPost.html"
 }
+
 
 
 window.onload = loadPosts;
