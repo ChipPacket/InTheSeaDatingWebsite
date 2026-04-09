@@ -452,5 +452,39 @@ class LoginAPI(Resource):
 
 api.add_resource(LoginAPI, "/api/login")
 
+class AdminLoginAPI(Resource):
+    def post(self):
+
+        #get admin inputs
+        data = request.get_json()
+
+        #get the admin ID and password
+        adminID = data.get("adminId")
+        password = data.get("password")
+
+        #check all data is there
+        if not adminID or not password:
+            return {"error": "Admin ID and password required"}
+
+        #find admin id of matching admin ID
+        admin = Admin.query.filter_by(adminID=adminID).first()
+
+        if not admin:
+            return {"error": "Admin not found :("}
+
+        #check if password mismatch
+        if admin.password != password:
+            return {"error": "Invalid password :("}
+
+        #return admin id if sucess
+        return {
+            "message": "Login successful yay",
+            "admin": {
+                "id": admin.adminID
+            }
+        }
+
+api.add_resource(AdminLoginAPI, "/api/admin/login")
+
 if __name__ == "__main__":
     app.run(debug=True)
