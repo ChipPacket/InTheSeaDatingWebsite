@@ -113,7 +113,9 @@ class UserAPI(Resource):
         user.ownGender=data["ownGender"]
         user.attractedGender=data["attractedGender"]
         user.profileContent=data["profileContent"]
-        user.password=data["password"]
+        password = data.get("password")
+        if password:
+            user.password = password
         user.activeUser=data["activeUser"]
         user.image=data["image"]
         user.q1=data["q1"]
