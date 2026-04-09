@@ -44,6 +44,12 @@ class UserAPI(Resource):
                 "profileContent": user.profileContent,
                 "password": user.password,
                 "activeUser": user.activeUser,
+                "q1": user.q1,
+                "q2": user.q2,
+                "q3": user.q3,
+                "a1": user.a1,
+                "a2": user.a2,
+                "a3": user.a3,
                 "image": user.image
             }
             user_list.append(user_data)
@@ -74,7 +80,13 @@ class UserAPI(Resource):
             profileContent=data["profileContent"],
             password=data["password"],
             activeUser=True,
-            image=data["image"]
+            image=data["image"],
+            q1=data["q1"],
+            q2=data["q2"],
+            q3=data["q3"],
+            a1=data["a1"],
+            a2=data["a2"],
+            a3=data["a3"]
         )
 
         db.session.add(new_user)
@@ -104,6 +116,12 @@ class UserAPI(Resource):
         user.password=data["password"]
         user.activeUser=data["activeUser"]
         user.image=data["image"]
+        user.q1=data["q1"]
+        user.q2=data["q2"]
+        user.q3=data["q3"]
+        user.a1=data["a1"]
+        user.a2=data["a2"]
+        user.a3=data["a3"]
 
         # Commit the changes
         db.session.commit()

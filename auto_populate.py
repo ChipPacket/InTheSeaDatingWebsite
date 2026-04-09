@@ -15,7 +15,13 @@ users = [
         "profileContent": "Love travelling and music",
         "password": "hashedpassword123",
         "activeUser": True,
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlTYMeNp_7MrmR5_XpVHKv_UQQz6pIvAS1jA&s"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlTYMeNp_7MrmR5_XpVHKv_UQQz6pIvAS1jA&s",
+        "q1": "What's your favourite drink?",
+        "q2": "Daddy issues?",
+        "q3": "Who do you trust more than anyone?",
+        "a1": "It would have to be wine, maybe you could come over and I could turn some water into wine for you",
+        "a2": "YES",
+        "a3": "Would have to be my good freinds Judas, I can trust them with my life"
     },
     {
         "firstName": "Jane",
@@ -28,7 +34,13 @@ users = [
         "profileContent": "Gym lover and foodie",
         "password": "hashedpassword456",
         "activeUser": True,
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GoefY7o1IOlgbc6huGYNhjQwJL79SezcqQ&s"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GoefY7o1IOlgbc6huGYNhjQwJL79SezcqQ&s",
+        "q1": "What's your favourite drink?",
+        "q2": "Daddy issues?",
+        "q3": "Who do you trust more than anyone?",
+        "a1": "It would have to be wine, maybe you could come over and I could turn some water into wine for you",
+        "a2": "YES",
+        "a3": "Would have to be my good freinds Judas, I can trust them with my life"
     },
     {
         "firstName": "King",
@@ -41,7 +53,13 @@ users = [
         "profileContent": "Tech enthusiast",
         "password": "hashedpassword789",
         "activeUser": True,
-        "image": "https://people.com/thmb/kXryMIxxzett33juT5iNoe8LGBk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(689x346:691x348):format(webp)/king-charles-london-fashion-week-021926-1-07cd8aa8c07949fcb6b3215733982cf7.jpg"
+        "image": "https://people.com/thmb/kXryMIxxzett33juT5iNoe8LGBk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(689x346:691x348):format(webp)/king-charles-london-fashion-week-021926-1-07cd8aa8c07949fcb6b3215733982cf7.jpg",
+        "q1": "What's your favourite drink?",
+        "q2": "Daddy issues?",
+        "q3": "Who do you trust more than anyone?",
+        "a1": "It would have to be wine, maybe you could come over and I could turn some water into wine for you",
+        "a2": "YES",
+        "a3": "Would have to be my good freinds Judas, I can trust them with my life"
     }
 ]
 
@@ -131,7 +149,13 @@ with app.app_context():
             profileContent=user_data["profileContent"],
             password=user_data["password"],
             activeUser=user_data["activeUser"],
-            image=user_data["image"]
+            image=user_data["image"],
+            q1=user_data["q1"],
+            q2=user_data["q2"],
+            q3=user_data["q3"],
+            a1=user_data["a1"],
+            a2=user_data["a2"],
+            a3=user_data["a3"]
         )
 
         # Add to database
