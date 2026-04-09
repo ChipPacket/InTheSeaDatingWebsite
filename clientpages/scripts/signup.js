@@ -36,6 +36,7 @@ document.getElementById("newUser").addEventListener("submit", async function(e) 
         if (response.ok) {
             alert("New User yay");
             document.getElementById("newUser").reset();
+            window.location.href = "login.html"
         } else {
             alert("Something has broke :(");
         }
