@@ -44,3 +44,7 @@ body{
     color: #2b2b2b !important;
     text-decoration: underline;
 }
+
+#navbarDropdown::after {
+    display: none !important;
+}
