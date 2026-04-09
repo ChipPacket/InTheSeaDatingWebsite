@@ -130,7 +130,6 @@ async function loadUsers() {
                     var dateString = `${user.birthday}`;
                     dateString = new Date(dateString).toUTCString();
                     dateString = dateString.split(' ').slice(0, 4).join(' ');
-                    console.log(dateString);
 
                     elementBirthday.innerHTML = dateString;
                     elementContent.innerHTML = user.profileContent;
