@@ -223,6 +223,7 @@ h4 {
     background-color: salmon;
 }
 
-div {
-    padding: 0px 0px;
+.main {
+    /* t r b l */
+    padding: 20px 0px 200px 50px;
 }

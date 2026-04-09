@@ -1,44 +1,80 @@
-
 async function loadBlogs() {   
     
-     if (response.ok) 
-                {
-                    const users = await response.json();
-                    const container = document.getElementById("usersprofiles");
+    //create all the bits to change
+    const Title1 = document.getElementById("p1title");
+    const Author1 = document.getElementById("p1author");
+    const Image1 = document.getElementById("p1image");
+    const Title2 = document.getElementById("p2title");
+    const Author2 = document.getElementById("p2author");
+    const Image2 = document.getElementById("p2image");
+    const Title3 = document.getElementById("p3title");
+    const Author3 = document.getElementById("p3author");
+    const Image3 = document.getElementById("p3image");
 
+    //put them into an array to loop through
+    const Titles = [Title1, Title2, Title3];
+    const Authors = [Author1, Author2, Author3];
+    const Images = [Image1, Image2, Image3];
+    
 
-                        users.forEach(user => {
-                            
-                            //defualt
-                            let image = user.image
-                            if (image == "")
-                                {
-                                    image = "../assets/pfp.jpg"
-                                    console.log("check");
-                                }
+    
+    
+    //get blog posts and make the most recent 3 pop up
+    try {
+            const response = await fetch(`${URL}/api/blogPosts`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-api-key": KEY 
+                }
+            });
 
+            const posts = await response.json();
+            let index = posts.length;
 
-                            const card = document.createElement("div");
-
-                            card.className = "col-md-4 mb-4";
-                            
-                            //card for each user
-                            // button will redirect to user page as well as storing the users id again
-                            card.innerHTML = `
-                                <div class="card my-3 h-100" style="width: 18rem;">
-                                    <img class="card-img-top" src="${image}" alt="Card image cap" style="height:250px; width:100%; object-fit:cover;">
-                                    <div class="card-body">
-                                    </div>
-                                </div>
-                            `;
-
-                            container.appendChild(card);
-
-                            
-                    });
-                };
+            for (let i = 0; i < posts.length; i++){
+                
+                Titles[i].innerHTML = posts[index- 1 - i].title;
+                Authors[i].innerHTML = `By: ${posts[index- 1 - i].author}`;
+                Images[i].src = posts[index- 1 - i].image;
             }
 
+
+
+    
+    }
+    catch(error)
+    {
+        console.error("Uh oh we have an error", error);
+    }     
+}
+
+//fills the modals with the content from database
+async function openModal(i) {
+
+    try {
+            const response = await fetch(`${URL}/api/blogPosts`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-api-key": KEY 
+                }
+            });
+
+            const posts = await response.json();
+            const post = posts[posts.length - i];
+
+            document.getElementById("modalTitle").innerHTML = post.title;
+            document.getElementById("modalContent").innerHTML = post.content;
+
+            const modal = new bootstrap.Modal(document.getElementById('blogModal'));
+            modal.show();
+
+    }
+    catch(error){
+        console.error("Uh oh we have an error", error);
+    }
+}
 
 
 window.onload = loadBlogs()
