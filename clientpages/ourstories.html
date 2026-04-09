@@ -12,7 +12,6 @@
     
 
 <body>
-
     <nav class="navbar navbar-expand-lg bg" style="background-color: salmon">
                     <a class="navbar-brand" href="clienthome.html">
                         <img src="../assets/logo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-center mx-2">
@@ -33,14 +32,29 @@
                             <a class="nav-link" href="findyourcatch.html">Find My Catch</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Profile</a>
+                            <a class="nav-link" href="profile.html">My Profile</a>
                         </li>
                         <li class="nav-item"></li>
-                            <a class="nav-link" href="blogPost.html">Our Stories</a>
+                            <a class="nav-link" href="ourstories.html">Our Stories</a>
                         </li>
                         <li class="nav-item"></li>
                             <a class="nav-link" href="aboutUs.html">About Us</a>
                         </li>
+                        
+                        </ul>
+
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu"> 
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="profile-pic">
+                                    <img src="../assets/pfp.png" width="50px" height="50px" alt="Profile Picture">
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><button class="dropdown-item" href="profile.html"><i class="fas fa-sign-out-alt fa-fw"></i>Edit Profile</button></li>
+                                <li><button class="dropdown-item" onclick="logout()"><i class="fas fa-sign-out-alt fa-fw"></i>Log Out</button></li>
+                            </ul>
+                            </li>
                         </ul>
                 </div>
     </nav>
@@ -145,7 +159,7 @@
     </div>
 </body>
 
-
+<script src="scripts/const.js"></script>
 <script src="scripts/ourstories.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>
