@@ -27,21 +27,17 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active"  href="#">Review User Reports</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">View User Profiles</a>
+                        <a class="nav-link" href="adminUserList.html">View User Profiles</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Blog Management
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="newPost.html">Add New Blog Posts</a></li>
+                            <li><a class="dropdown-item" href="newPost.html">Add Blog Posts</a></li>
                             <li><a class="dropdown-item" href="viewEditPosts.html">Edit Blog Posts</a></li>
-                            <li><a class="dropdown-item" href="#">Delete Blog Posts</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="viewBlogPosts.html">View Blog Posts</a></li>
+                            <li><a class="dropdown-item" href="viewBlogPosts.html">View/Delete Blog Posts</a></li>
                         </ul>
                     </li> 
                 </ul>
@@ -67,9 +63,9 @@
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title" style="text-align: center;">Review User Reports</h5>
+                    <h5 class="card-title" style="text-align: center;">View User Profiles</h5>
                     <div class="d-grid gap-2">
-                        <button>Button</button>
+                        <button onclick="window.location.href='adminUserList.html'">Go!</button>
                     </div>
                 </div>
             </div>
@@ -89,7 +85,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="text-align: center;">Add Blog Posts</h5>
                     <div class="d-grid gap-2">
-                        <button>Button</button>
+                        <button onclick="window.location.href='newPost.html'">Go!</button>
                     </div>
                 </div>
             </div>
@@ -99,7 +95,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="text-align: center;">Edit Blog Posts</h5>
                     <div class="d-grid gap-2">
-                        <button>Button</button>
+                        <button onclick="window.location.href='viewEditPosts.html'">Go!</button>
                     </div>
                 </div>
             </div>
@@ -108,33 +104,23 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-sm-2"></div>
+        <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title" style="text-align: center;">Delete Blog Posts</h5>
+                    <h5 class="card-title" style="text-align: center;">View/Delete Blog Posts</h5>
                     <div class="d-grid gap-2">
-                        <button>Button</button>
+                        <button onclick="window.location.href='adminPostList.html'">Go!</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title" style="text-align: center;">View Blog Posts</h5>
-                    <div class="d-grid gap-2">
-                        <button>Button</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-2"></div>
+        <div class="col-sm-4"></div>
     </div>
 
     <br>
     <!-- IMAGE -->
-    <img src="../assets/aquarium.jpg" width="100%" height="auto" class="img-fluid" alt="Aquarium image" style="isolation: isolate;"> 
+    <img src="../assets/aquarium-nobg.png" width="100%" height="auto" class="img-fluid" alt="Aquarium image""> 
 </body>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
