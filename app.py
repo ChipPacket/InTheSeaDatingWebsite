@@ -5,10 +5,6 @@ from datetime import datetime
 from auth import require_api_key
 from flask_cors import CORS
 
-
-
-
-
 # Create a Flask application instance
 app = Flask(__name__)
 CORS(app)
@@ -42,7 +38,7 @@ class UserAPI(Resource):
                 "ownGender": user.ownGender,
                 "attractedGender": user.attractedGender,
                 "profileContent": user.profileContent,
-                "password": user.password,
+                #"password": user.password,
                 "activeUser": user.activeUser,
                 "q1": user.q1,
                 "q2": user.q2,
@@ -445,8 +441,7 @@ class LoginAPI(Resource):
         return {
             "message": "Login successful yay",
             "user": {
-                "id": user.userID,
-                "email": user.email
+                "id": user.userID
             }
         }
 
