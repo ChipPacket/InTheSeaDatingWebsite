@@ -1,4 +1,7 @@
 
+
+
+
 async function loadBlogs() {   
     
     //create all the bits to change
@@ -79,5 +82,6 @@ async function openModal(i) {
 
 
 window.onload = loadBlogs()
+
 
     
