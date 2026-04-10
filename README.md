@@ -58,12 +58,12 @@ pip install flask_sqlalchemy
 
 #### Steps
 <ol>
-    <li>run db_creation.py</li>
-    <li>run auto_populate.py</li>
-    <li>run populate_apikeys.py</li>
-    <li>run showkeys.py to get the api keys</li>
-    <li>copy key into clientpages/scripts/const.js & adminpages/scripts/const.js</li>
-    <li>run app.py and visit website 🎉</li>
+    <li>Run db_creation.py</li>
+    <li>Run auto_populate.py</li>
+    <li>Run populate_apikeys.py</li>
+    <li>Run showkeys.py to get the api keys</li>
+    <li>Copy key into clientpages/scripts/const.js & adminpages/scripts/const.js</li>
+    <li>Run app.py and visit website 🎉</li>
 </ol>
 
 To start as admin, go to adminhome.html
