@@ -4,7 +4,6 @@
  <img src="assets/logo.png" width="70px" align="right">
 
 ## About
-### Website Description/Overview (copied from layla in aboutUs)
 InTheSea is a social network looking to those looking for love. No matter your age, gender, or preferences, you will be able to find the perfect catch for you!
 
 It isn't easy to find love in the modern era, so why not take a modern approach to love? InTheSea aims to do just that.
@@ -22,8 +21,8 @@ You might even see some success stories there - One day, it might be yours!
 
 ### Don't Wait! - Find Your Catch Today!
 
-## Setup (copied)
-To start, follow these steps:
+## Setup
+#### To start, follow these steps:
 
 ```shell
 # Open a terminal (Command Prompt or PowerShell for Windows, Terminal for macOS or Linux)
@@ -47,7 +46,17 @@ dotnet restore
 # Compile the project
 dotnet build
 ```
-#### Specific to our website (copied and changed from hamish's message)
+
+#### What you need to have installed:
+```shell
+pip install python
+pip install Flask
+pip install flask_restful
+pip install flask_cors
+pip install flask_sqlalchemy
+```
+
+#### Steps
 <ol>
     <li>run db_creation.py</li>
     <li>run auto_populate.py</li>
@@ -58,8 +67,7 @@ dotnet build
 </ol>
 
 ## Documentation
-Read more about our API documentation in separate file?
-Other documentation
+Read more about our API documentation here: https://github.com/ChipPacket/InTheSeaDatingWebsite/blob/main/apiDocumentation.md
 
 ## About us
 All developers are currently studying Computer Science at the University of Dundee. This project was made for CS22002 - Modern Web Stack Development.
