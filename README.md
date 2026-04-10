@@ -65,12 +65,12 @@ Other documentation
 All developers are currently studying Computer Science at the University of Dundee. This project was made for CS22002 - Modern Web Stack Development.
 
 The following people worked on InTheSea:
-|Name|Email|GitHub|
-|:-|:-|:-|
-|Carys Blyth|2632912@dundee.ac.uk|https://github.com/carysblyth|
-|Maddie Gee|maddie.gee.759@gmail.com|https://github.com/maddiegee759|
-|Hamish Mitchell|2635350@dundee.ac.uk|https://github.com/hambojambo222|
-|Layla Maksymuik|2637086@dundee.ac.uk|https://github.com/ChipPacket|
+|Name|Email|GitHub|LinkedIn
+|:-|:-|:-|:-|
+|Carys Blyth|2632912@dundee.ac.uk|https://github.com/carysblyth|https://www.linkedin.com/in/carys-blyth/|
+|Maddie Gee|2689868@dundee.ac.uk|https://github.com/maddiegee759|https://www.linkedin.com/in/maddie-gee-b40829289/|
+|Hamish Mitchell|2635350@dundee.ac.uk|https://github.com/hambojambo222|https://www.linkedin.com/in/hamish-mitchell-1186a6389/|
+|Layla Maksymuik|2637086@dundee.ac.uk|https://github.com/ChipPacket|https://www.linkedin.com/in/layla-maksymuik/|
 
 
 ### Thank you very much for reading!

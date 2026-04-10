@@ -62,7 +62,7 @@ async function loadPosts() {
                                     <td>${post.author}</td>
                                     <td>${post.dateOfPublish}</td>
                                     <td><button class="bt1" onclick="ViewPosts(${post.id})">Edit</button></td>
-                                    <td><button class="bt2" onclick="DltPosts(${post.id})">Delete</button></td>
+                                    <td><button class="btn btn-danger" onclick="DltPosts(${post.id})">Delete</button></td>
                             `;
 
                             container.appendChild(entry);

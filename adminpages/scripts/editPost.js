@@ -1,7 +1,7 @@
 
 
 const postid = localStorage.getItem("PostId");
-//const postid = 11;
+
 const adminid = 1; //will update when we make admin login page
 async function loadPosts() {    
     const elementTitle = document.getElementById("displayTitle");
