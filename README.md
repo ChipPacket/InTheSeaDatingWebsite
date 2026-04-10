@@ -22,7 +22,7 @@ You might even see some success stories there - One day, it might be yours!
 ### Don't Wait! - Find Your Catch Today!
 
 ## Setup
-To start, follow these steps:
+#### To start, follow these steps:
 
 ```shell
 # Open a terminal (Command Prompt or PowerShell for Windows, Terminal for macOS or Linux)
