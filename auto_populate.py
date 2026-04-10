@@ -68,9 +68,9 @@ admins = [
         "firstName": "Hamish",
         "lastName": "Mitchell",
         "birthday": date(2006, 3, 22),
-        "email": "Hamishgmitchell@gmail.com",
+        "email": "hamishgmitchell@gmail.com",
         "permissionLevel": "Max",
-        "password": "test"
+        "password": "germanMOANAxVAIANA"
     },
     {
         "firstName": "Micheal",
@@ -78,7 +78,15 @@ admins = [
         "birthday": date(2007, 5, 17),
         "email": "michaelbell@hotmail.com",
         "permissionLevel": "Max",
-        "password": "test1"
+        "password": "jensenAcklesisbae"
+    },
+    {
+        "firstName": "Maddie",
+        "lastName": "Gee",
+        "birthday": date(2007, 2, 8),
+        "email": "maddiegee@gmail.com",
+        "permissionLevel": "Max",
+        "password": "Sw4g<yellow3"
     }
 ]
 
@@ -133,6 +141,22 @@ blog_posts = [
         "content": "We've added exciting new features!",
         "image": "features.jpg",
         "dateOfPublish": date(2024, 3, 15)
+    },
+    {
+        "adminID": 1,
+        "authors": "Jackie Jones",
+        "title": "Cool song",
+        "content": "What can I say except, You're welcome? For the tides, the sun, the sky?",
+        "image": "https://static.wikia.nocookie.net/disney/images/6/6f/Profile_-_Maui.jpeg/revision/latest/thumbnail/width/360/height/360?cb=20250309150414",
+        "dateOfPublish": date(2024, 4, 1)
+    },
+    {
+        "adminID": 3,
+        "authors": "Maddie Gee",
+        "title": "Robots found love - you can too!",
+        "content": "Two robots fell in love on their journey to Jeju Island. Read more here: https://en.wikipedia.org/wiki/Maybe_Happy_Ending",
+        "image": "https://www.slantmagazine.com/wp-content/uploads/2024/11/maybehappyending.jpg",
+        "dateOfPublish": date(2024, 5, 1)
     }
 ]
 
