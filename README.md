@@ -66,6 +66,14 @@ pip install flask_sqlalchemy
     <li>run app.py and visit website 🎉</li>
 </ol>
 
+To start as admin, go to adminhome.html
+AdminID = 1
+Password = 'test'
+
+To start as admin, go to clienthome.html
+Email = 'jane.smith@example.com'
+Password = 'hashedpassword456'
+
 ## Documentation
 Read more about our API documentation here: https://github.com/ChipPacket/InTheSeaDatingWebsite/blob/main/apiDocumentation.md
 

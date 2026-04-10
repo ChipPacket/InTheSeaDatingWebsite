@@ -34,11 +34,10 @@ document.getElementById("newUser").addEventListener("submit", async function(e) 
         console.log(text);
 
         if (response.ok) {
-            alert("New User yay");
             document.getElementById("newUser").reset();
             window.location.href = "login.html"
         } else {
-            alert("Something has broke :(");
+            alert("Something went wrong.");
         }
 
     } catch (error) {

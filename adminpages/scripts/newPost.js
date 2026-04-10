@@ -24,10 +24,7 @@ document.getElementById("newPost").addEventListener("submit", async function(e) 
         console.log(text);
 
         if (response.ok) {
-            alert("New Post yay");
             document.getElementById("newPost").reset();
-        } else {
-            alert("Something has broke :(");
         }
 
     } catch (error) {

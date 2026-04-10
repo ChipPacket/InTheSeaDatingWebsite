@@ -23,18 +23,12 @@ document.getElementById("login").addEventListener("submit", async function(e) {
         if (response.ok) 
             
         {
-            alert("Logged In success");
-
             //saves logged in user - not secure but not sure how else to do this tbh
             localStorage.setItem("adminId", result.admin.id);
 
             document.getElementById("login").reset();
             window.location.href = "adminhome.html"
         } 
-        else 
-        {
-            alert("Login Failed");
-        }
 
     } catch (error) {
         console.error(error);

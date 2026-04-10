@@ -1,4 +1,4 @@
-const KEY = "3441462ecb5c1866294702d261de3d861d4636786208992d212a702233267367";
+const KEY = "ffe4423b530667ef207db2f52df52a241657d1e5f62b84fb6a1af7961e8f1e22";
 const URL = "http://127.0.0.1:5000";
 
 function logout(){
