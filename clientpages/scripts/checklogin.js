@@ -8,11 +8,11 @@ function checkUserLogIn(){
         document.getElementById("findMyCatch").href = "findyourcatch.html";
 
         // change sign up
-        document.getElementById("myProfile").href = "profile.html";
+        document.getElementById("myProfile").href = "editdetails.html";
 
         // change log in -> myprofile
         document.getElementById("opt1").innerHTML = "My Profile";
-        document.getElementById("opt1").href = "profile.html";
+        document.getElementById("opt1").href = "editdetails.html";
 
         // change sign up -> log out
         document.getElementById("opt2").innerHTML = "Log Out";
