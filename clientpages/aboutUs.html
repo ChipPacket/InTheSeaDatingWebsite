@@ -6,7 +6,7 @@
     <title>Find Your Catch</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
       #contact {
         padding: 200px 50px;
@@ -16,32 +16,47 @@
 <body>
 
   <nav class="navbar navbar-expand-lg bg" style="background-color: salmon">
-    <a class="navbar-brand" href="clienthome.html">
-      <img src="../assets/logo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-center mx-2">
-    </a>
-    <a class="" href="clienthome.html">
-      <b class="text-start d-inline-block align-text-center" style="color: white; font-size: 32.5px;">In The Sea</b>
-    </a>            
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>            
-    <div class="collapse navbar-collapse mx-5" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="findyourcatch.html">Find My Catch</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">My Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="blogPost.html">Our Stories</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="aboutUs.html">About Us</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        <a class="navbar-brand" href="clienthome.html">
+            <img src="../assets/logo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-center mx-2">
+        </a>
+        <a class="" href="clienthome.html">
+            <b class="text-start d-inline-block align-text-center" style="color: white; font-size: 32.5px;">In The Sea</b>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>        
+        <div class="collapse navbar-collapse mx-5" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="findyourcatch.html">Find My Catch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">My Profile</a>
+                </li>
+                <li class="nav-item"></li>
+                    <a class="nav-link" href="ourstories.html">Our Stories</a>
+                </li>
+                <li class="nav-item"></li>
+                    <a class="nav-link" href="aboutUs.html">About Us</a>
+                </li>        
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu"> 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="profile-pic">
+                            <img src="../assets/pfp.png" width="50px" height="50px" alt="Profile Picture">
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><button class="dropdown-item" href="profile.html"><i class="fas fa-sign-out-alt fa-fw"></i>Edit Profile</button></li>
+                        <li><button class="dropdown-item" onclick="logout()"><i class="fas fa-sign-out-alt fa-fw"></i>Log Out</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
   <div class="main">
     <div class="row">
       <div class="col-6">
@@ -59,19 +74,19 @@
         <img src="../assets/logo.png" alt="logo" style="height:400px;width:400px;text-align:center;float:center;margin-left:100px;">
       </div>
     </div>
-    <div class="row" style="background-color: white;border-radius: 3%;">
-      <div class="col-4">
+    <div class="row justify-content-center gap-3">
+      <div class="col-3" style="background-color: white; border-radius: 3%; padding:15px;">
         <h3>Fun Questions!</h3>
         <p>Detail your profile with fun questions to let the world know more about you and show off your fun personality!</p>
       </div>
-      <div class="col-4">
+      <div class="col-3" style="background-color: white; border-radius: 3%; padding:15px;">
         <h3>Compatability Scores!</h3>
         <p>
           Using the StarLoveMatch API, InTheSea has a built-in compatability score!
           When browsing the site, you will see a compatablity score between yourself and other users, using astrology to help you find a better catch for you!
         </p>
       </div>
-      <div class="col-4">
+      <div class="col-3" style="background-color: white; border-radius: 3%; padding:15px;">
         <h3>Frequent Updates!</h3>
         <p>
           Our website features a blog that regularly updates, featuring tips, tricks, and other helpful information!
