@@ -11,16 +11,17 @@ document.getElementById("newPost").addEventListener("submit", async function(e) 
     };
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/api/blogPosts", {
+        const response = await fetch(`${URL}/api/blogPosts`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "x-api-key": "7b26804109382641a54ff1ded939045d8978542fe8b0f14cbd51b44fc302f4c9" 
+                "x-api-key": KEY
             },
             body: JSON.stringify(data)
         });
 
-        const result = await response.json();
+        const text = await response.text();
+        console.log(text);
 
         if (response.ok) {
             alert("New Post yay");
