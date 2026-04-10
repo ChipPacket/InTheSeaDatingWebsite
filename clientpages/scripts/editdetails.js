@@ -1,5 +1,5 @@
-// Awill auto update at the end
-const userid = 1;
+// Auto updates now
+const userid = localStorage.getItem("userId")
 
 // well behaved elements
 const elementAttractedGender = document.getElementById("attractedGender");
@@ -122,6 +122,38 @@ document.getElementById("userDetailsForm").addEventListener("submit", async func
         console.error(error);
         alert("Network error!");
     }
+});
+
+document.getElementById("delete").addEventListener("click", async function () {
+
+    const data = {
+        id: userid
+    }
+    
+
+    try {
+            const response = await fetch(`${URL}/api/users`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-api-key": KEY
+                },
+                body: JSON.stringify(data)
+            });
+
+        
+
+            if (response.ok) 
+                {
+                    window.location.href = "login.html"
+                };
+            }
+
+    catch(error)
+    {
+        console.error(error);
+        alert("error");
+    }     
 });
 
 window.onload = loadUsers;

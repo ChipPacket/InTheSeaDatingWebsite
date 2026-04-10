@@ -2,7 +2,7 @@ document.getElementById("newPost").addEventListener("submit", async function(e) 
     e.preventDefault();
 
     const data = {
-        adminID: 1, 
+        adminID: localStorage.getItem("adminId"),
         authors: document.getElementById("author").value,
         title: document.getElementById("title").value,
         content: document.getElementById("content").value,

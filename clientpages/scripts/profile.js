@@ -1,6 +1,6 @@
 
 
-
+//auto updates
 const userid = localStorage.getItem("selectedUserId");
 const logid = localStorage.getItem("userId");
 
@@ -86,10 +86,10 @@ async function checkMatch(users) {
 
     if (result.length > 0) {
             const love = result[0].love;
-            elementCompatability.innerHTML = `${love}%`;
-        } else {
-            elementCompatability.innerHTML = "No match found";
-        }
+            var totalLove = 0 + love;
+            totalLove = totalLove*5;
+            elementCompatability.innerHTML = `${Math.round(totalLove)}%`;
+        } 
 }
 
 async function loadUsers() {
