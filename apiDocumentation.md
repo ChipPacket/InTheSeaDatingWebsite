@@ -56,7 +56,7 @@ api.add_resource(LoginAPI, "/api/login")
 
 api.add_resource(AdminLoginAPI, "/api/admin/login")
 ```
-### login Recources
+### Login Recources
 
 The login resources are used to get the user or admin id without having the passwords being passed to the front end for added security
 
